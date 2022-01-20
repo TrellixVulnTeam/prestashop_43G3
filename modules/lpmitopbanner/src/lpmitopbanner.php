@@ -26,7 +26,7 @@ class LpmiTopBanner extends TupsCoreModule
     public $configDescription = "Module pour afficher un texte magnifique en haut de page";
 
     const TEXT_BANDEAU = 'text';
-    const COLOR_BANDEAU = 'text';
+    const COLOR_BANDEAU = 'red';
 
     protected $_override = array(
         //'classes/Cart.php'
