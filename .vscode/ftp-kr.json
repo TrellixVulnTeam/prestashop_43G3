@@ -1,0 +1,16 @@
+{
+    "host": "jorart.ecommerce-learning.fr",
+    "username": "jorart",
+    "password": "MokleNNKLPIHiJP",
+    "remotePath": "htdocs/",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": false,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}
