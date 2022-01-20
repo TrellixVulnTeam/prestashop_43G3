@@ -25,8 +25,8 @@ class LpmiTopBanner extends TupsCoreModule
     public $configDisplayName = 'La superbe bannière en haut de mon site';
     public $configDescription = "Module pour afficher un texte magnifique en haut de page";
 
-    const TEXT_BANDEAU = 'text';
-    const COLOR_BANDEAU = 'red';
+    const TEXT_BANDEAU = 'Salut tout le monde je suis la bannière';
+    const COLOR_BANDEAU = 'text';
 
     protected $_override = array(
         //'classes/Cart.php'
@@ -35,9 +35,9 @@ class LpmiTopBanner extends TupsCoreModule
 
     // Installation des hooks
     protected $_hook = array(
-//        'displayAdminOrderContentOrder' => array(
-//            'position' => 1,
-//        ),
+       'displayBanner' => array(
+           'position' => 1,
+       ),
     );
 
 
@@ -91,6 +91,23 @@ class LpmiTopBanner extends TupsCoreModule
             ),
         );
     }
+
+    // Appel du HOOK danns la module
+        public function hookDisplayBanner($params)
+        {
+
+                // configurer les variables envoyées à la template
+        $this->context->smarty->assign(array(
+            'maVariable' => 'La valeur'
+        ));
+
+                // charger retourner la template smarty du module
+        return $this->display($this->path, 'template.tpl');
+        }
+
+
+
+    
 
 
 

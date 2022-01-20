@@ -1,0 +1,2 @@
+{hook h='displayBanner'}
+Salut
