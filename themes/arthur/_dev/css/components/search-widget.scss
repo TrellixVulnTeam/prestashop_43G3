@@ -5,6 +5,10 @@
 
 .header-top {
   &-right {
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+    }
+
     @include media-breakpoint-down(xs) {
       width: 100%;
       padding-right: 15px;
@@ -12,6 +16,10 @@
   }
 
   .search-widgets {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
     form {
       input[type="text"] {
         width: 100%;
@@ -29,13 +37,6 @@
         bottom: inherit;
         transform: translateY(-50%);
       }
-    }
-  }
-
-  // stylelint-disable-next-line
-  #search_widget {
-    input {
-      padding-right: 1rem;
     }
   }
 }
@@ -83,13 +84,5 @@
 @include media-breakpoint-up(md) {
   .search-widget {
     min-width: 15.63rem;
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .header-top {
-    .search-widgets {
-      max-width: 13rem;
-    }
   }
 }

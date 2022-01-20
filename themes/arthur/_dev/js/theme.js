@@ -50,6 +50,7 @@ import './lib/jquery.scrollbox.min';
 
 import './components/block-cart';
 import $ from 'jquery';
+import Swiper from "swiper";
 /* eslint-enable */
 
 // "inherit" EventEmitter
@@ -83,4 +84,26 @@ $(document).ready(() => {
     },
     allowPageScroll: 'vertical',
   });
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
 });

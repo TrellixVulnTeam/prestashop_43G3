@@ -25,7 +25,7 @@ class LpmiTopBanner extends TupsCoreModule
     public $configDisplayName = 'La superbe bannière en haut de mon site';
     public $configDescription = "Module pour afficher un texte magnifique en haut de page";
 
-    const TEXT_BANDEAU = 'Salut tout le monde je suis la bannière';
+    const TEXT_BANDEAU = 'text';
     const COLOR_BANDEAU = 'text';
 
     protected $_override = array(

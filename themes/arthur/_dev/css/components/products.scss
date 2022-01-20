@@ -8,7 +8,6 @@
 
 .product-price {
   display: inline-block;
-  max-width: 100%;
   color: $brand-primary;
 }
 
@@ -36,9 +35,9 @@
   color: $gray-darker;
 
   .manufacturer-logo {
-    max-height: 4rem;
+    height: 3.125rem;
     margin-bottom: 1rem;
-    border: 2px solid $gray-light;
+    border: none;
   }
 
   .product-description {
@@ -244,13 +243,10 @@
   }
 }
 
-.product-unit-price,
-.has-discount .product-unit-price {
+.product-unit-price {
   margin-bottom: 0;
-  overflow: hidden;
   font-size: $font-size-xs;
-  color: $gray;
-  text-overflow: ellipsis;
+  color: $brand-primary;
 }
 
 .tabs {
@@ -759,11 +755,6 @@
 
   .customization-message {
     margin-top: 20px;
-
-    .customization-label {
-      text-align: left;
-      word-break: break-word;
-    }
   }
 
   .custom-file {
