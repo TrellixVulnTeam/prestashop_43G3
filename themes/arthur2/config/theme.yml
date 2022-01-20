@@ -1,10 +1,10 @@
-name: classic
-display_name: Classic
-version: 1.0.0
+name: arthur2
+display_name: Arthur v.2
+version: 23.3.1
 author:
-  name: "PrestaShop Team"
-  email: "pub@prestashop.com"
-  url: "https://www.prestashop.com"
+  name: "Arthur JORIS"
+  email: "contact@arthurjoris.fr"
+  url: "jorart.ecommerce-learning.fr"
 
 meta:
   compatibility:
