@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by Lord of Web.
- * User: Damien
- * Date: 02/01/2019
- * Time: 11:16
+ * Created by LordAythur.
+ * User: Arthur
+ * Date: 21/01/2022
+ * Time: 08:36
  */
 
 
@@ -25,9 +25,6 @@ class LpmiTopBanner extends TupsCoreModule
     public $configDisplayName = 'La superbe bannière en haut de mon site';
     public $configDescription = "Module pour afficher un texte magnifique en haut de page";
 
-    const TEXT_BANDEAU = 'text';
-    const COLOR_BANDEAU = 'color';
-
 
     // Installation des hooks
     protected $_hook = array(
@@ -35,6 +32,20 @@ class LpmiTopBanner extends TupsCoreModule
            'position' => 1,
        ),
     );
+
+     // Appel du HOOK danns la module
+     public function hookDisplayBanner($params)
+     {
+ 
+     // Exemple :
+     // configurer les variables envoyées à la template
+     $this->context->smarty->assign(array(
+         'text' => self::getConfig("textBandeau"),
+         'color' => self::getConfig("couleurBandeau"),
+     ));
+     // charger retourner la template smarty du module
+     return $this->display($this->path, 'template.tpl');
+     }
 
 
     // affichage de la configuration du module
@@ -59,14 +70,14 @@ class LpmiTopBanner extends TupsCoreModule
                     array(
                         'type' => 'text',
                         'label' => 'Texte du bandeau',
-                        'desc' => "",
-                        'name' => self::getConfigName(self::TEXT_BANDEAU),
+                        'desc' => "Définir le texte présent dans le bandeau",
+                        'name' => self::getConfigName("textBandeau")
                     ),
                     array(
                         'type' => 'color',
-                        'label' => 'Couleur du bandeau',
-                        'desc' => "",
-                        'name' => self::getConfigName(self::COLOR_BANDEAU),
+                        'label' => 'Couleur du fond du bandeau',
+                        'desc' => "Définir la couleur présente dans le bandeau",
+                        'name' => self::getConfigName("couleurBandeau")
                     ),
                 ),
                 'submit' => array(
@@ -75,17 +86,4 @@ class LpmiTopBanner extends TupsCoreModule
             ),
         );
     }
-
-    // Appel du HOOK danns la module
-        public function hookDisplayBanner($params)
-        {
-
-                // configurer les variables envoyées à la template
-        $this->context->smarty->assign(array(
-            'maVariable' => 'La valeur'
-        ));
-
-                // charger retourner la template smarty du module
-        return $this->display($this->path, 'template.tpl');
-        }
 }

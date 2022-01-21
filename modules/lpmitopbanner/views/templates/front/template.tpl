@@ -1,1 +1,1 @@
-{$maVariable}
+<div style="color: white;background-color: {$color};width: 100%;height:50px;display: flex;justify-content: center;align-items: center;font-weight:500">{$text}</div>
