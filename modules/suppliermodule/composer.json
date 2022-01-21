@@ -1,0 +1,8 @@
+{
+    "description": "supplierModule",
+    "autoload": {
+        "psr-4": {
+            "PrestaShop\\Module\\SupplierModule\\": "src/"
+        }
+    }
+}
