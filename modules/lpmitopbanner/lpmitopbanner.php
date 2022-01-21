@@ -26,11 +26,7 @@ class LpmiTopBanner extends TupsCoreModule
     public $configDescription = "Module pour afficher un texte magnifique en haut de page";
 
     const TEXT_BANDEAU = 'text';
-    const COLOR_BANDEAU = 'text';
-
-    protected $_override = array(
-        //'classes/Cart.php'
-    );
+    const COLOR_BANDEAU = 'color';
 
 
     // Installation des hooks
@@ -66,20 +62,8 @@ class LpmiTopBanner extends TupsCoreModule
                         'desc' => "",
                         'name' => self::getConfigName(self::TEXT_BANDEAU),
                     ),
-                ),
-                'submit' => array(
-                    'title' => $this->l('Save'),
-                ),
-            ),
-            'form' => array(
-                'tab_name' => 'config_tab',
-                'legend' => array(
-                    'title' => $this->l('Settings'),
-                    'icon' => 'icon-cogs',
-                ),
-                'input' => array(
                     array(
-                        'type' => 'text',
+                        'type' => 'color',
                         'label' => 'Couleur du bandeau',
                         'desc' => "",
                         'name' => self::getConfigName(self::COLOR_BANDEAU),
@@ -104,11 +88,4 @@ class LpmiTopBanner extends TupsCoreModule
                 // charger retourner la template smarty du module
         return $this->display($this->path, 'template.tpl');
         }
-
-
-
-    
-
-
-
 }
