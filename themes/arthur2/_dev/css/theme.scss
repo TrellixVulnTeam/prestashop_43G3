@@ -38,5 +38,9 @@
 @import "~swiper/swiper";
 /* stylelint-enable */
 
-#header {background-color: #7799a5!important;}
+#header {background-color: #7799a5;}
+#header * {background-color: #7799a5!important;}
+#header a, #header span, #header i{color: white!important;background-color: transparent!important;}
+#header .search{color: #7799a5!important;}
+#header input {background-color: white!important;}
 
